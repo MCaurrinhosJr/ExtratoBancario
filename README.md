@@ -1,6 +1,6 @@
 # BancoExtrato
 
-**BancoExtratoApp** é uma aplicação web desenvolvida em .NET 8 utilizando o padrão MVC (Model-View-Controller). Este projeto visa fornecer uma interface para os correntistas de um banco visualizarem e gerenciarem seus extratos bancários de forma eficiente.
+**BancoExtrato** é uma aplicação web desenvolvida em .NET 8 utilizando o padrão MVC (Model-View-Controller). Este projeto visa fornecer uma interface para os correntistas de um banco visualizarem e gerenciarem seus extratos bancários de forma eficiente.
 
 ## Funcionalidades Principais
 
