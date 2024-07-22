@@ -1,0 +1,42 @@
+Como Iniciar o Projeto
+
+Certifique-se de que você tem o .NET 8 SDK e o SQL Server instalados.
+
+Baixe e instale o .NET 8 SDK a partir do site oficial.
+Instale o SQL Server Express ou configure uma instância do SQL Server. Você pode baixar o SQL Server Express no site da Microsoft.
+
+Clone o repositório usando o comando git clone fornecido acima.
+
+- Execute o comando: 
+  git clone https://github.com/seu-usuario/BancoExtrato.git
+
+Configure a string de conexão no arquivo appsettings.json para apontar para o seu banco de dados SQL Server.
+
+Abra o arquivo appsettings.json localizado no diretório raiz do projeto.
+Modifique a string de conexão para corresponder ao seu ambiente de banco de dados:
+
+"ConnectionStrings": {
+  "Banco": "Server=(localdb)\\mssqllocaldb;Database=ExtratoBancarioDb;Trusted_Connection=True;"
+}
+
+Ajuste conforme necessário se estiver usando uma instância diferente do SQL Server.
+
+Restaurar os pacotes NuGet executando dotnet restore no diretório do projeto.
+
+Navegue até o diretório do projeto e execute o comando: dotnet restore
+
+Aplicar as migrações para criar o banco de dados e as tabelas necessárias com dotnet ef database update.
+
+Execute o comando: dotnet ef database update
+
+Inicie o projeto executando dotnet run.
+
+No diretório do projeto, execute o comando: dotnet run
+Abra seu navegador e acesse http://localhost:5000 para interagir com a aplicação.
+
+Visite a documentação Swagger em http://localhost:5000/swagger para explorar e testar os endpoints da API.
+
+Use os endpoints da API para filtrar transações e gerar PDFs.
+
+Para filtrar transações, use o endpoint /api/extrato com o parâmetro days apropriado.
+Para gerar e baixar um PDF, use o endpoint /api/extrato/pdf com o parâmetro days adequado.
